@@ -1,6 +1,5 @@
 {-# OPTIONS_GHC -fwarn-incomplete-patterns #-}
 {-# LANGUAGE GADTs, DataKinds, TypeOperators, KindSignatures #-}
-{-# LANGUAGE TypeFamilies #-}
 
 import Text.Parsec
 import Control.Applicative hiding ((<|>))
