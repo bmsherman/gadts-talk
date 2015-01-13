@@ -97,15 +97,6 @@ index env (V s) = case doGet s env of
   Just (Gotten Refl val) -> val
   Nothing -> undefined
 
-{-
-mkVarIdx :: TyList STy as -> String -> Maybe (Tagged VarIdx as)
-mkVarIdx Nil _ = Nothing
-mkVarIdx (a :. _  ) 0 = Just (Tag a Z)
-mkVarIdx (a :. as) i = case mkVarIdx as (i - 1) of
-  Just (Tag ty n) -> Just (Tag ty (S n))
-  Nothing -> Nothing
--}
-
 eval :: Expr '[] ty -> Value ty
 eval e = eval' Nil e
   where
