@@ -26,8 +26,10 @@ which may be loaded with GHCi:
   to non-well-formed expressions; in fact, doing so causes a Haskell
   compiler error. The pattern matching failures from *Step1.hs* are
   now verified to be impossible. (NOTE: GHC currently still warns of
-  incomplete patterns due to a bug. If you try to handle the so-called
-  missing patterns, a compiler error will result.)
+  incomplete patterns due to a [bug]
+  (https://ghc.haskell.org/trac/ghc/ticket/3927). If you try to
+  handle the so-called missing patterns, a compiler error will
+  result.)
 - *Step3.hs*: An implementation with GADTs (similar to *Step2.hs*)
   together with a Parsec parser that parses in expressions of the
   embedded language from strings into the GADT expression language,
@@ -39,7 +41,7 @@ Bruijn indices. There is a file [*Named.hs*]
 where variables are given names (Strings, or, at the type level,
 "Symbols") instead. My implementation requires closed type families
 with pattern matching to do the variable name lookup at compile-time.
-Unfortunately, it is impossible to recapitulate the lookup at runtime
+Unfortunately, it is impossible to repeat the lookup at runtime
 because failure to match types in a type-family definition cannot be
 saved in a constraint or data structure. So we use `unsafeCoerce`
 to make GHC happy.
