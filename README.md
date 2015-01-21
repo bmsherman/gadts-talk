@@ -1,6 +1,6 @@
- Some example materials for an upcoming Haskell DC talk on GADTs.
- There are three examples here, listed (roughly) in order of
- increasing sophistication:
+Some example materials for a Haskell DC talk on GADTs
+which occurred on January 15, 2015. There are three examples here,
+listed (roughly) in order of increasing sophistication:
  
  - *tuple*: A simple, and simply typed, embedded language allowing
    manipulation of constants. Allowed types are integers, booleans,
