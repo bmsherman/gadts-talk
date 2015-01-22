@@ -43,6 +43,8 @@ where variables are given names (Strings, or, at the type level,
 with pattern matching to do the variable name lookup at compile-time.
 Unfortunately, it is impossible to repeat the lookup at runtime
 because failure to match types in a type-family definition cannot be
-saved in a constraint or data structure. So we use `unsafeCoerce`
+saved in a constraint or data structure (see
+[section 7.5 of this paper](http://www.cis.upenn.edu/~eir/papers/2014/axioms/axioms-extended.pdf).
+So we use `unsafeCoerce`
 to make GHC happy.
 
